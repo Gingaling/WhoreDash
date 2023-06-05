@@ -9,7 +9,7 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="h1 fw-bold">Oh no...out of lube or in need of a cock ring?</h1>
-        <p class="lead text-muted">No need to get dressed, find the nearest smoke shop, and break the mood. WhoreDash will deliver to you those little somethings to make your evening special.</p>
+        <p class="lead text-muted">No need to get dressed, find the nearest smoke shop, and break the mood. WhoreDash will deliver to you those little somethings to make your uninterrupted evening special.</p>
         <p>
           <a href="#" class="btn btn-primary my-2">Make an account</a>
         </p>
@@ -17,7 +17,7 @@
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
+  <div class="album py-2 bg-light">
     <div class="container">
 
       <div class="pb-3 h5">All Products</div>
@@ -27,13 +27,14 @@
 
         <div class="col">
           <div class="card shadow-sm">
-            <img class="img-fluid" alt="Responsive image" src="{{ product.image.url }}">
+            <img class="img-fluids" alt="Responsive image" src="{{ product.image.url }}">
             <div class="card-body">
               <p class="card-text">
                 <a class="text-dark text-decoration-none" href="{{ product.get_absolute_url }}">{{ product.name }}</a>
               </p>
+              <p>${{ product.price}}</p>
               <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">9min read</small>
+                <small class="text-muted">In-stock? {{product.available}}</small>
               </div>
             </div>
           </div>
