@@ -31,10 +31,13 @@
             <div class="card-body">
               <p class="card-text">
                 <a class="text-dark text-decoration-none" href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                <p>${{ product.price }}</p>
               </p>
-              <p>${{ product.price}}</p>
               <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">In-stock? {{product.available}}</small>
+                {% comment %} <small class="text-muted">In-stock? </small> {% endcomment %}
+                {% if product.available %}
+                <p>In stock?  Yes</p>
+                {% endif %}
               </div>
             </div>
           </div>
